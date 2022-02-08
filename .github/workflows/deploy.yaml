@@ -20,6 +20,7 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
+      - name: Copy files to the server
         run: |
           scp -r src/* $SSH_USER@$SSH_HOST:~/quicksave.dev/html
         env:
