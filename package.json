@@ -1,0 +1,21 @@
+{
+  "name": "quicksave.dev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "scp -r src/* nialvi@quicksave.dev:/var/www/quicksave.dev/html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nialvi/quicksave.dev.git"
+  },
+  "keywords": [],
+  "author": "Nikolaev Viktor <maclauddd@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nialvi/quicksave.dev/issues"
+  },
+  "homepage": "https://github.com/nialvi/quicksave.dev#readme"
+}
