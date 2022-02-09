@@ -16,10 +16,8 @@ jobs:
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
           chmod 700 ~/.ssh
           chmod 600 ~/.ssh/id_rsa
-          echo "$SSH_KNOWN_HOSTS" >> ~/.ssh/known_hosts
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
       - name: Copy files to the server
         run: |
           scp -r src/* $SSH_USER@$SSH_HOST:/var/www/quicksave.dev/html
