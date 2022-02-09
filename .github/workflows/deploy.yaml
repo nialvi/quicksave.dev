@@ -22,7 +22,7 @@ jobs:
           SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
       - name: Copy files to the server
         run: |
-          scp -r src/* $SSH_USER@$SSH_HOST:~/quicksave.dev/html
+          scp -r src/* $SSH_USER@$SSH_HOST:/var/www/quicksave.dev/html
         env:
           SSH_HOST: ${{ secrets.SSH_HOST }}
           SSH_USER: ${{ secrets.SSH_USER }}
